@@ -1,0 +1,43 @@
+@import '/src/variables.scss';
+
+
+.wrapper {
+	width: 100%;
+	// height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logo {
+		width: 54%;
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+
+		i {
+			font-size: 1.9em;
+			margin: 0 .65rem;
+		}
+
+		.hamburger {
+			width: 44px;
+			height: 44px;
+			margin-left: 1.1rem;
+			background-color: $color-blueish;
+			border-radius: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.hamburgerLine {
+				width: 50%;
+				height: .2rem;
+				margin: .2rem 0;
+				background-color: white;
+			}
+		}
+	}
+}

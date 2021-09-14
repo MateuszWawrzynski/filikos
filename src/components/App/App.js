@@ -1,9 +1,13 @@
-import './App.module.scss'
+import Header from '../Header/Header'
+import styles from './App.module.scss'
 
 
 function App() {
 	return (
-		<h1>Hello world!</h1>
+		<div className={styles.wrapper}>
+			<Header />
+			
+		</div>
 	);
 }
 
