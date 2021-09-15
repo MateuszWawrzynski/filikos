@@ -8,4 +8,9 @@ $color-grayish: #EDEDED;
 $color-yellowish: #F6C64B;
 
 // Global margins
-$mobile-page-margins: 13px 13px;
+$mobile-page-margins: 1.3rem 1.3rem;
+$desktop-page-margins: 2.9rem auto;
+
+// Desktop transformation
+$desktop-width-transform: 1200px;
+$desktop-wrapper-width: 1170px;

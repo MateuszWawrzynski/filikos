@@ -1,43 +1,165 @@
 @import '/src/variables.scss';
 
-
 .wrapper {
-	width: 100%;
-	// height: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 1.1em;
-
-	.logo {
-		width: 54%;
+	.content {
+		width: 100%;
+		// height: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 2.5em;
+	
+		@media (min-width: $desktop-width-transform) {
+			justify-content: space-between;
+		}
+	
+		.logo {
+			height: 4rem;
+	
+			@media (min-width: $desktop-width-transform) {
+				height: 5.4rem;
+			}
+		}
+	
+		.search {
+			display: none;
+			position: relative;
+			
+			@media (min-width: $desktop-width-transform) {
+				display: block;
+			}
+	
+			.searchInput {
+				margin-left: 5.8em;
+				padding: 0 1.6rem .4em;
+				height: 4.3rem;
+				width: 34.5rem;
+				border: none;
+				border-radius: 90px;
+				background-color: $color-whiteish;
+				outline: none;
+			}
+	
+			i {
+				position: absolute;
+				top: 25%;
+				right: 4%;
+				font-size: 1.8rem;
+			}
+		}
+		
+	
+		.nav {
+			display: flex;
+			align-items: center;
+	
+			i {
+				font-size: 1.9em;
+				margin: 0 .65rem;
+	
+				@media (min-width: $desktop-width-transform) {
+					display: none;
+				}
+			}
+	
+			.hamburger {
+				width: 44px;
+				height: 44px;
+				margin-left: 1.1rem;
+				background-color: $color-blueish;
+				border-radius: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+	
+				@media (min-width: $desktop-width-transform) {
+					display: none;
+				}
+	
+				.hamburgerLine {
+					width: 50%;
+					height: .2rem;
+					margin: .2rem 0;
+					background-color: white;
+				}
+			}
+	
+			.buttons {
+				line-height: 4.8em;
+	
+				.navBtn {
+					display: none;
+	
+					@media (min-width: $desktop-width-transform) {
+						display: inline-block;
+						margin: 0 1.8em;
+						text-decoration: none;
+						color: black;
+						font-size: 1.1rem;
+						font-family: 'Noto Sans';
+						font-weight: bold;
+	
+						:first-child {
+							color: red;
+						}
+					}
+				}
+	
+				.cartBtn {
+					display: none;
+	
+					i {
+						display: inline-block;
+						font-size: 1.7rem;
+					}
+	
+					.value {
+						margin-left: 1.9em;
+						margin-right: 2.4em;
+					}
+	
+					.icon {
+						font-size: .85rem;
+					}
+	
+					@media (min-width: $desktop-width-transform) {
+						display: inline-block;
+						margin-left: .3em;
+						height: 5.3rem;
+						width: 15.5rem;
+						padding: 0 1em;
+						border: none;
+						border-radius: 90px;
+						text-decoration: none;
+						color: white;
+						font-size: 1.35rem;
+						font-family: 'Noto Sans';
+						font-weight: bold;
+						background-color: $color-blueish;
+					}
+				}
+			}
+		}
 	}
 
-	.nav {
-		display: flex;
-		align-items: center;
+	.menu {
+		display: none;
 
-		i {
-			font-size: 1.9em;
-			margin: 0 .65rem;
-		}
-
-		.hamburger {
-			width: 44px;
-			height: 44px;
-			margin-left: 1.1rem;
-			background-color: $color-blueish;
-			border-radius: 50%;
+		@media (min-width: $desktop-width-transform) {
 			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			.hamburgerLine {
-				width: 50%;
-				height: .2rem;
-				margin: .2rem 0;
-				background-color: white;
+			justify-content: space-between;
+			width: 96%;
+			margin-top: .5rem;
+			padding-bottom: 1.6rem;
+			
+			:last-child {
+				color: $color-orangeish;
+			}
+			span {
+				font-size: 1.4rem;
+				font-weight: bold;
+				font-family: 'Noto Sans';
 			}
 		}
 	}
