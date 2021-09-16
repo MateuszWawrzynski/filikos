@@ -10,7 +10,10 @@
 	}
 
 	.buySection {
-		display: flex;
-		justify-content: space-between;
+
+		@media (min-width: $desktop-width-transform) {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 }

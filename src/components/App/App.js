@@ -3,6 +3,7 @@ import styles from './App.module.scss'
 import Header from '../Header/Header'
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
 import Gallery from '../Gallery/Gallery';
+import BuyForm from '../BuyForm/BuyForm';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 			<Breadcrumbs />
 			<div className={styles.buySection}>
 				<Gallery />
+				<BuyForm />
 			</div>
 		</div>
 	);
