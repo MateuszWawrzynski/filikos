@@ -1,0 +1,77 @@
+@import '/src/variables.scss';
+
+.wrapper {
+	position: relative;
+	background-color: white;
+	width: 100%;
+	max-height: 300px;
+	overflow: hidden;
+
+	@media (min-width: $desktop-width-transform) {
+		width: 55%;
+		max-height: 477px;
+		display: flex;
+	}
+
+	.photo {
+		width: 115%;
+		vertical-align: bottom;
+		object-fit: cover;
+		transform: translate(-10%, -8%);
+
+		@media (min-width: $desktop-width-transform) {
+			width: 78%;
+			transform: translate(0, 6%);
+		}
+	}
+
+	.thumbs {
+		display: none;
+
+		@media (min-width: $desktop-width-transform) {
+			width: 16.5%;
+			padding: 1.2em .1em;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+		.more {
+			width: 70%;
+			padding: 1.2em 0;
+			text-align: center;
+			border: 1px solid $color-grayish;
+			color: black;
+
+			:first-child {
+				font-size: 1.9em;
+			}
+
+			:last-child {
+				font-size: 1.3em;
+			}
+		}
+	}
+
+	.bestseller {
+		display: none;
+
+		@media (min-width: $desktop-width-transform) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 4.7%;
+			right: 3.5%;
+			width: 70px;
+			height: 70px;
+			border-radius: 90px;
+			background-color: $color-orangeish;
+			color: white;
+			font-family: 'Amatic SC';
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
+}

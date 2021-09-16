@@ -3,17 +3,22 @@
 
 .wrapper {
 	width: 100%;
-	background-color: $color-whiteish;
-	// color: $color-grayish;
 	display: flex;
-	padding: 1.1em 0;
+	padding: 1em 0;
 	font-size: 1.2rem;
-	font-family: 'Noto Sans';
+
+	@media (min-width: $desktop-width-transform) {
+		padding: 1.4em 0;
+	}
 
 	.backwards {
 		margin-right: 1.1em;
 		padding-right: 1.4em;
 		border-right: 1px solid black;
+
+		@media (min-width: $desktop-width-transform) {
+			display: none;
+		}
 
 		.icon {
 			margin-right: 1.3em;
@@ -29,6 +34,28 @@
 
 		.icon {
 			margin-right: .7em;
+		}
+
+		@media (min-width: $desktop-width-transform) {
+			display: none;
+		}
+	}
+
+	.desktop {
+		display: none;
+		color: black;
+
+		@media (min-width: $desktop-width-transform) {
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		span {
+			margin: 0 1em;
 		}
 	}
 }

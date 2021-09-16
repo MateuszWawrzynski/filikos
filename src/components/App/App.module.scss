@@ -8,4 +8,9 @@
 		max-width: $desktop-wrapper-width;
 		margin: $desktop-page-margins;
 	}
+
+	.buySection {
+		display: flex;
+		justify-content: space-between;
+	}
 }
