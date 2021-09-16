@@ -30,14 +30,15 @@ export default function BuyForm() {
 				</span>
 				<span className={styles.discount}>39,00 zł</span>
 				<span className={styles.label}>PROMOCJA</span>
+				<a className={styles.instalments} href='/'>Kup na raty</a>
 			</div>
 			<div className={styles.purchase}>
-				<a href='/'>Kup na raty</a>
+				<a className={styles.instalments} href='/'>Kup na raty</a>
 				<div className={styles.form}>
-					<input className={styles.quantity} type='number' defaultValue='1' />
+					<input className={styles.quantity} type='text' defaultValue='1' />
 					<button>DODAJ OD KOSZYKA</button>
 				</div>
-				<a href='/'>Do listy zakupowej</a>
+				<a className={styles.saveLater} href='/'>Do listy zakupowej</a>
 			</div>
 			<ul className={styles.info}>
 				<li>

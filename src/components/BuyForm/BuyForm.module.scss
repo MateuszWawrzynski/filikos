@@ -4,19 +4,32 @@
 	background-color: white;
 	// width: 100%;
 	padding-left: .2em;
+
 	@media (min-width: $desktop-width-transform) {
 		width: 43%;
 		max-height: 477px;
+		padding-top: .5em;
 	}
 
 	.header {
 		display: flex;
 		flex-direction: column;
 		padding-top: 1.6em;
-		
+
+		@media (min-width: $desktop-width-transform) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding-left: 3.2em;
+			padding-right: .6em;
+		}
 
 		.title {
 			order: 2;
+
+			@media (min-width: $desktop-width-transform) {
+				order: 0;
+			}
 			
 			h1 {
 				margin-bottom: .2em;
@@ -34,6 +47,10 @@
 		.creator {
 			order: 1;
 			width: 35%;
+
+			@media (min-width: $desktop-width-transform) {
+				width: 26%;
+			}
 		}
 	}
 
@@ -42,6 +59,11 @@
 		margin-left: .3em;
 		letter-spacing: .05em;
 		font-size: .8em;
+
+		@media (min-width: $desktop-width-transform) {
+			margin-top: 1.9em;
+			padding-left: 4em;
+		}
 		
 		.options {
 			margin-top: 1.4em;
@@ -61,6 +83,10 @@
 	.availability {
 		margin-top: 2.2em;
 
+		@media (min-width: $desktop-width-transform) {
+			padding-left: 3.2em;
+		}
+
 		p {
 			font-size: 1.3em;
 			font-weight: bold;
@@ -75,6 +101,10 @@
 
 	.price {
 		margin-top: .8em;
+
+		@media (min-width: $desktop-width-transform) {
+			padding-left: 3.2em;
+		}
 
 		.value {
 			font-size: 3em;
@@ -104,19 +134,52 @@
 			font-family: 'Amatic SC';
 			font-size: 1.8em;
 		}
+
+		.instalments {
+			display: none;
+
+			@media (min-width: $desktop-width-transform) {
+				display: inline-block;
+				font-size: 1.3em;
+				color: black;
+				margin-left: 1.6em;
+			}
+		}
 	}
 
 	.purchase {
 		margin-top: .5em;	
 		padding-bottom: 1.6em;
 
+		@media (min-width: $desktop-width-transform) {
+			padding-left: 3.2em;
+			padding-bottom: 0;
+			display: flex;
+			align-items: center;
+		}
+
 		a {
 			font-size: 1.3em;
 			color: black;
 		}
 
+		.instalments {
+			@media (min-width: $desktop-width-transform) {
+				display: none;
+			}
+		}
+
+		.saveLater {
+			width: 5em;
+		}
+
 		.form {
 			margin: 1.6em 0 1.8em;
+
+			@media (min-width: $desktop-width-transform) {
+				margin: .7em 0 1.8em;
+				display: inline-block;
+			}
 
 			.quantity {
 				width: 3.4em;
@@ -137,11 +200,16 @@
 				border-radius: 90px;
 				background-color: $color-blueish;
 				outline: none;
-
 				font-size: 1.3em;
 				font-family: 'Noto Sans';
 				font-weight: bold;
 				color: white;
+
+				@media (min-width: $desktop-width-transform) {
+					margin-left: 1em;
+					margin-right: .8em;
+					padding: 0 4.95em 0 6.4em;
+				}
 			}
 		}
 	}
@@ -153,8 +221,14 @@
 		list-style-type: none;
 		font-size: 1.2em;
 
+		@media (min-width: $desktop-width-transform) {
+			padding-top: 0;
+			padding-left: 3.1em; 
+			border: 0;
+		}
+
 		li {
-			margin-bottom: .6em;
+			margin-bottom: .55em;
 			
 			i,p {
 				display: inline-block;
