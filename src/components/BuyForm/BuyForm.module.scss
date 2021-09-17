@@ -6,7 +6,8 @@
 	padding-left: .2em;
 
 	@media (min-width: $desktop-width-transform) {
-		width: 43%;
+		grid-area: buyform;
+		margin-left: .6em;
 		max-height: 477px;
 		padding-top: .5em;
 	}

@@ -8,7 +8,8 @@
 	overflow: hidden;
 
 	@media (min-width: $desktop-width-transform) {
-		width: 55%;
+		grid-area: gallery;
+		margin-right: 1.6em;
 		max-height: 477px;
 		display: flex;
 	}

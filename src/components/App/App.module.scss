@@ -1,7 +1,7 @@
 @import '/src/variables.scss';
 
 .wrapper {
-	height: 200vh; // temp
+	height: 1000vh; // temp
 	margin: $mobile-page-margins;
 
 	@media (min-width: $desktop-width-transform) {
@@ -9,11 +9,13 @@
 		margin: $desktop-page-margins;
 	}
 
-	.buySection {
+	.productArea {
 
 		@media (min-width: $desktop-width-transform) {
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-template-areas: 
+				'gallery buyform'
+				'versions versions';
 		}
 	}
 }
