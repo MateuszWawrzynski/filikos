@@ -2,18 +2,37 @@
 
 .wrapper {
 	background-color: white;
+	padding: $mobile-page-margins;
+	padding-bottom: 0;
+
+	@media (min-width: $desktop-width-transform) {
+		position: relative;
+		padding: 0;
+		padding-top: $desktop-page-margins;
+		padding-bottom: 0;
+		max-width: $desktop-wrapper-width;
+		margin: auto;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -50%;
+			width: 200%;
+			height: 100%;
+			background-color: white;
+			z-index: -1;
+		}
+	}
 	
 	.content {
 		width: 100%;
-		// height: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-bottom: 1.1em;
 	
 		@media (min-width: $desktop-width-transform) {
-			justify-content: space-between;
-			// padding: $desktop-page-margins;
 			padding-bottom: 2.5em;
 		}
 	
@@ -151,16 +170,16 @@
 		@media (min-width: $desktop-width-transform) {
 			display: flex;
 			justify-content: space-between;
-			width: 96%;
 			margin-top: .5rem;
 			padding-bottom: 1.6rem;
 			
-			:last-child {
-				color: $color-orangeish;
-			}
 			span {
 				font-size: 1.4rem;
 				font-weight: bold;
+
+				&:last-of-type {
+					color: $color-orangeish;
+				}
 			}
 		}
 	}

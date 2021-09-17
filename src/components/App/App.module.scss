@@ -2,14 +2,11 @@
 
 .wrapper {
 	height: 1000vh; // temp
-	margin: $mobile-page-margins;
-
-	@media (min-width: $desktop-width-transform) {
-		max-width: $desktop-wrapper-width;
-		margin: $desktop-page-margins;
-	}
+	overflow-x: hidden;
 
 	.productArea {
+		max-width: $desktop-wrapper-width;
+		margin: auto;
 
 		@media (min-width: $desktop-width-transform) {
 			display: grid;

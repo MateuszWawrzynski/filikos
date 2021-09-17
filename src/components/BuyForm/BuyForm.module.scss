@@ -2,13 +2,14 @@
 
 .wrapper {
 	background-color: white;
-	// width: 100%;
-	padding-left: .2em;
+	padding: 0 $mobile-page-margins;
+	padding-left: calc(#{$mobile-page-margins} + .2em);
 
 	@media (min-width: $desktop-width-transform) {
 		grid-area: buyform;
 		margin-left: .6em;
 		max-height: 477px;
+		padding: 0;
 		padding-top: .5em;
 	}
 

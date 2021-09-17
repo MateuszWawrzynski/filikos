@@ -3,14 +3,16 @@
 .wrapper {
 	position: relative;
 	background-color: white;
-	// width: 100%;
 	max-height: 300px;
+	padding: 0 $mobile-page-margins;
 	overflow: hidden;
 
 	@media (min-width: $desktop-width-transform) {
 		grid-area: gallery;
 		margin-right: 1.6em;
 		max-height: 477px;
+		padding: 0;
+		padding-left: .2em;
 		display: flex;
 	}
 
