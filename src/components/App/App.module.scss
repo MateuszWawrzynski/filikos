@@ -1,7 +1,7 @@
 @import '/src/variables.scss';
 
 .wrapper {
-	height: 1000vh; // temp
+	min-height: 1000vh; // temp
 	overflow-x: hidden;
 
 	.productArea {
