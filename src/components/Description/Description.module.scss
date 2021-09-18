@@ -6,6 +6,25 @@
 	text-align: center;
 	background-color: white;
 
+	@media (min-width: $desktop-width-transform) {
+		position: relative;
+		max-width: $desktop-wrapper-width;
+		margin: auto;
+		margin-top: 4em;
+		padding-bottom: 9.7em;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -50%;
+			width: 200%;
+			height: 100%;
+			background-color: white;
+			z-index: -1;
+		}
+	}
+
 	.header {
 		position: relative;
 		padding-bottom: .75em;
@@ -23,64 +42,119 @@
 			height: 1px;
 			background-color: orange;
 		}
+
+		@media (min-width: $desktop-width-transform) {
+			margin-top: 1.41em;
+			transform: translateX(-2.4%);
+		}
 	}
 
 	.combo {
 		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
+		flex-direction: column;
 		margin-top: 1.5em;
-		transform: translateX(-3%);
 
-		img {
-			width: 40%;
+		@media (min-width: $desktop-width-transform) {
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			padding-left: 6.5em;
+		}
 
-			&:last-of-type {
-				width: 25%;
-				margin-left: 1em;
+		.comboImg {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			transform: translateX(-3%);
+
+			@media (min-width: $desktop-width-transform) {
+				transform: none;
+			}
+
+			img {
+				width: 40%;
+
+				&:last-of-type {
+					width: 25%;
+					margin-left: 1em;
+				}
+
+				@media (min-width: $desktop-width-transform) {
+					width: 50%;
+					transform: translateY(-8%);
+
+					&:last-of-type {
+						width: 35%;
+						margin-left: 2.7em;
+					}
+				}
+			}
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.6em;
+				color: white;
+				width: 2em;
+				height: 2em;
+				transform: translateX(33%);
+				background-color: $color-blueish;
+				border-radius: 90px;
+
+				@media (min-width: $desktop-width-transform) {
+					transform: translate(-3%, -41%);
+					font-size: 2.5em;
+					margin-left: 1.8em;
+					width: 2.1em;
+					height: 1.8em;
+				}
 			}
 		}
 
-		span {
+		.comboInfo {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 1.6em;
-			color: white;
-			width: 2em;
-			height: 2em;
-			transform: translateX(33%);
-			background-color: $color-blueish;
-			border-radius: 90px;
-		}
-	}
+			flex-direction: column;
+			margin-top: .3em;
 
-	.comboInfo {
-		display: flex;
-		flex-direction: column;
-		margin-top: .3em;
+			@media (min-width: $desktop-width-transform) {
+				flex-direction: row;
+				margin-top: 0;
+				transform: translateY(-5%);
 
-		p:first-of-type {
-			font-size: 1.3em;
-		}
+				.prices {
+					width: 35em;
+					text-align: right;
+				}
+			}
 
-		p:last-of-type {
-			font-size: 2em;
-			font-weight: bold;
-		}
+			p:first-of-type {
+				font-size: 1.3em;
+			}
 
-		button {
-			margin: 1.7em auto;
-			width: 50%;
-			height: 4em;
-			border: 2px solid $color-blueish;
-			border-radius: 90px;
-			background-color: white;
-			outline: none;
-			font-size: 1.3em;
-			font-family: 'Noto Sans';
-			font-weight: bold;
-			color: $color-blueish;
+			p:last-of-type {
+				font-size: 2em;
+				font-weight: bold;
+			}
+
+			button {
+				margin: 1.7em auto;
+				width: 50%;
+				height: 4em;
+				border: 2px solid $color-blueish;
+				border-radius: 90px;
+				background-color: white;
+				outline: none;
+				font-size: 1.3em;
+				font-family: 'Noto Sans';
+				font-weight: bold;
+				color: $color-blueish;
+
+				@media (min-width: $desktop-width-transform) {
+					margin: 0;
+					margin-left: 1.7em;
+				}
+			}
 		}
 	}
 
@@ -90,25 +164,74 @@
 		align-items: center;
 		padding: 0 1.5em;
 
-		.photo {
-			margin: 1em 0 3.4em;
-			width: 65%;
+		@media (min-width: $desktop-width-transform) {
+			padding: 0;
 		}
 
-		.description {
-			margin-bottom: 1.4em;
-			padding: 0 .4em;
+		.about {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
-			.second {
-				padding-bottom: 1em;
+			@media (min-width: $desktop-width-transform) {
+				flex-direction: row;
+				justify-content: flex-start;
 			}
-			
-			.text {
-				margin: 3.4em 0;
-				font-size: 1.3em;
 
-				p {
-					margin-bottom: 1.4em;
+			.photo {
+				margin: 1em 0 3.4em;
+				width: 65%;
+
+				@media (min-width: $desktop-width-transform) {
+					order: 2;
+					margin: 0;
+					margin-left: 12em;
+					margin-bottom: 5em;
+					width: 30%;
+				}
+			}
+
+			.description {
+				margin-bottom: 1.4em;
+				padding: 0 .4em;
+
+				@media (min-width: $desktop-width-transform) {
+					width: 53%;
+					margin-top: 2.8em;
+					padding: 0;
+					text-align: left;
+				}
+
+				.second {
+					padding-bottom: 1em;
+
+					@media (min-width: $desktop-width-transform) {
+						transform: none;
+
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							transform: none;
+							width: 8.5em;
+							height: 1px;
+							background-color: orange;
+						}
+					}
+				}
+				
+				.text {
+					margin: 3.4em 0;
+					font-size: 1.3em;
+
+					@media (min-width: $desktop-width-transform) {
+						margin-bottom: 1em;
+					}
+
+					p {
+						margin-bottom: 1.4em;
+					}
 				}
 			}
 		}
@@ -117,9 +240,18 @@
 	.parameters {
 		width: 100%;
 
+		@media (min-width: $desktop-width-transform) {
+			margin-left: .8em;
+		}
+
 		.column {
 			display: flex;
 			margin-top: 1.4em;
+
+			@media (min-width: $desktop-width-transform) {
+				justify-content: center;
+				margin-top: 2.6em;
+			}
 
 			ul {
 				list-style-type: none;
@@ -128,7 +260,13 @@
 
 				&:first-child {
 					margin-right: 4.7em;
+
+					@media (min-width: $desktop-width-transform) {
+						text-align: right;
+						margin-left: .8em;
+					}
 				}
+
 				&:last-child {
 					font-weight: bold;
 				}
@@ -141,6 +279,10 @@
 						font-size: .95em;
 						font-weight: normal;
 						color: $color-blackish;
+
+						@media (min-width: $desktop-width-transform) {
+							margin-left: 0;
+						}
 					}
 				}
 			}
@@ -151,17 +293,32 @@
 			flex-direction: column;
 			margin-top: 2.5em;
 			text-align: left;
+
+			@media (min-width: $desktop-width-transform) {
+				flex-direction: row;
+				justify-content: center;
+				margin-top: 4.9em;
+				transform: translateX(-1.2%);
+			}
 	
 			p {
 				margin-left: .2em;
 				font-size: 1.2em;
 				font-weight: bold;
+
+				@media (min-width: $desktop-width-transform) {
+					margin-right: .8em;
+				}
 			}
 
 			.files {
 				display: flex;
 				margin-top: 1.6em;
 				font-size: 1.2em;
+
+				@media (min-width: $desktop-width-transform) {
+					margin-top: 0;
+				}
 
 				a {
 					margin-right: 2.9em;

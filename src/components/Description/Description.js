@@ -6,37 +6,41 @@ export default function Description() {
 	return (
 		<div className={styles.wrapper}>
 			<h1 className={styles.header}>W zestawie kupisz taniej</h1>
-			<div>			
-				<div className={styles.combo}>
+			<div className={styles.combo}>			
+				<div className={styles.comboImg}>
 					<img src='./assets/photos/photo_3a.png' alt='combo-1' />
 					<span>+</span>
 					<img src='./assets/photos/photo_3b.png' alt='combo-2' />
 				</div>
 				<div className={styles.comboInfo}>
-					<p>Cena produktów poza zestawem 199,00 zł</p>
-					<p>149,00 zł / zestaw</p>
+					<div className={styles.prices}>
+						<p>Cena produktów poza zestawem 199,00 zł</p>
+						<p>149,00 zł / zestaw</p>
+					</div>
 					<button>ZOBACZ OFERTĘ</button>
 				</div>
 			</div>
 			<div className={styles.content}>
-				<img className={styles.photo} src='./assets/photos/thumb-4.png' alt='main' />
-				<div className={styles.description}>
-					<h1 className={`${styles.header} ${styles.second}`}>Zestaw naczyń bambusowych dla dzieci Alex AMBITION JUNIOR</h1>
-					<div className={styles.text}>
-						<p>Funkcjonalne, rozbudzające wyobraźnię, wesołe i kolorowe naczynia z kolekcji Mimi i Alex marki AMBITION zachęcą Twoje dziecko do samodzielnej nauki jedzenia. Wykonane z włókna bambusowego, które jest biodegradalne i ekologiczne oraz bezpieczne dla dzieci</p>
-						<p>Produkt bezpieczny, dopuszczalny do kontaktu z żywnością. Nietuzinkowe wzornictwo produktów z kolekcji Mimi i Alex umilą chwile spędzone wspólnie przy stole.</p>
-						<p>Naczynia nadają się do mycia w zmywarce. Nie należy używać w mikrofalówce i zamrażarce.</p>
-						<p>W skład zestawu wchodzą 3 elementy:</p>
-						<p>
-							talerz: 21 cm<br />
-							miska: 360 ml<br />
-							kubek: 180 ml
-						</p>
-						<p>
-							Kolor: odcienie brązowego, zielonego, kremowego<br />
-							Oferowany zestaw zapakowany jest w elegancki karton, dzięki czemu doskonale nadaje się na prezent.<br />
-							Produkt przeznaczony dla młodszych dzieci.
-						</p>
+				<div className={styles.about}>
+					<img className={styles.photo} src='./assets/photos/thumb-4.png' alt='main' />
+					<div className={styles.description}>
+						<h1 className={`${styles.header} ${styles.second}`}>Zestaw naczyń bambusowych dla dzieci Alex AMBITION JUNIOR</h1>
+						<div className={styles.text}>
+							<p>Funkcjonalne, rozbudzające wyobraźnię, wesołe i kolorowe naczynia z kolekcji Mimi i Alex marki AMBITION zachęcą Twoje dziecko do samodzielnej nauki jedzenia. Wykonane z włókna bambusowego, które jest biodegradalne i ekologiczne oraz bezpieczne dla dzieci</p>
+							<p>Produkt bezpieczny, dopuszczalny do kontaktu z żywnością. Nietuzinkowe wzornictwo produktów z kolekcji Mimi i Alex umilą chwile spędzone wspólnie przy stole.</p>
+							<p>Naczynia nadają się do mycia w zmywarce. Nie należy używać w mikrofalówce i zamrażarce.</p>
+							<p>W skład zestawu wchodzą 3 elementy:</p>
+							<p>
+								talerz: 21 cm<br />
+								miska: 360 ml<br />
+								kubek: 180 ml
+							</p>
+							<p>
+								Kolor: odcienie brązowego, zielonego, kremowego<br />
+								Oferowany zestaw zapakowany jest w elegancki karton, dzięki czemu doskonale nadaje się na prezent.<br />
+								Produkt przeznaczony dla młodszych dzieci.
+							</p>
+						</div>
 					</div>
 				</div>
 				<div className={styles.parameters}>
