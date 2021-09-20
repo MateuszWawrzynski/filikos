@@ -1,0 +1,44 @@
+@import '/src/variables.scss';
+
+.wrapper {
+	margin-top: 3.8em;
+	padding-bottom: 1em;
+	text-align: center;
+
+	.header {
+		position: relative;
+		padding-left: .5em;
+		padding-bottom: .95em;
+		font-size: 2.5em;
+		font-weight: normal;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 8.5em;
+			height: 1px;
+			background-color: orange;
+		}
+
+		@media (min-width: $desktop-width-transform) {
+			margin-top: 2.25em;
+			padding-left: 0;
+			transform: translateX(-.25em);
+		}
+	}
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 2em 1.9em;
+
+		@media (min-width: $desktop-width-transform) {
+			padding: 2.5em 36.5em;
+			transform: translateX(-.75%);
+		}
+	}
+}

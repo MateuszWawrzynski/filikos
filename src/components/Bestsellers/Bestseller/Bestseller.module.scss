@@ -1,0 +1,45 @@
+@import '/src/variables.scss';
+
+.wrapper {
+	width: 48%;
+	margin: 1em 0 .5em;
+	padding-bottom: 1.4em;
+	background-color: white;
+	text-align: center;
+
+	@media (min-width: $desktop-width-transform) {
+		width: 23.6%;
+		padding-bottom: 2.8em;
+	}
+
+	img {
+		width: 85%;
+		margin-top: 1.2em;
+		margin-bottom: 1.4em;
+
+		@media (min-width: $desktop-width-transform) {
+			margin-top: 2em;
+			margin-bottom: 2.7em;
+		}
+	}
+
+	p {
+		padding: .7em 1em 0;
+		font-size: 1.3em;
+		border-top: 1px solid $color-grayish;
+
+		@media (min-width: $desktop-width-transform) {
+			padding: 1.5em 3.1em 0;
+		}
+
+		&:last-of-type {
+			margin-top: .7em;
+			font-weight: bold;
+			border-top: none;
+
+			@media (min-width: $desktop-width-transform) {
+				padding-top: .7em;
+			}
+		}
+	}
+}

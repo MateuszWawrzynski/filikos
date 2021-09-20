@@ -7,6 +7,7 @@ import Gallery from '../Gallery/Gallery';
 import BuyForm from '../BuyForm/BuyForm';
 import Versions from '../Versions/Versions';
 import Description from '../Description/Description';
+import Bestsellers from '../Bestsellers/Bestsellers';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 				<Versions />
 			</div>
 			<Description />
+			<Bestsellers titleShort='Bestsellery' titleLong='Zobacz podobne' />
 		</div>
 	);
 }
