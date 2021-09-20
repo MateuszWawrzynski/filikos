@@ -138,14 +138,10 @@
 		}
 
 		.instalments {
-			display: none;
-
-			@media (min-width: $desktop-width-transform) {
-				display: inline-block;
-				font-size: 1.3em;
-				color: black;
-				margin-left: 1.6em;
-			}
+			display: inline-block;
+			font-size: 1.3em;
+			color: black;
+			margin-left: 1.6em;
 		}
 	}
 
@@ -163,12 +159,6 @@
 		a {
 			font-size: 1.3em;
 			color: black;
-		}
-
-		.instalments {
-			@media (min-width: $desktop-width-transform) {
-				display: none;
-			}
 		}
 
 		.saveLater {

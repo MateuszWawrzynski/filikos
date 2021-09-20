@@ -1,8 +1,12 @@
 import React from 'react'
 import styles from './BuyForm.module.scss'
 
+import useDesktopView from '../../hooks/useDesktopView'
+
 
 export default function BuyForm() {
+	const desktopMode = useDesktopView()
+	
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.header}>
@@ -30,10 +34,14 @@ export default function BuyForm() {
 				</span>
 				<span className={styles.discount}>39,00 zł</span>
 				<span className={styles.label}>PROMOCJA</span>
-				<a className={styles.instalments} href='/'>Kup na raty</a>
+				{desktopMode && (
+					<a className={styles.instalments} href='/'>Kup na raty</a>
+				)}
 			</div>
 			<div className={styles.purchase}>
-				<a className={styles.instalments} href='/'>Kup na raty</a>
+				{!desktopMode && (
+					<a className={styles.instalments} href='/'>Kup na raty</a>
+				)}
 				<div className={styles.form}>
 					<input className={styles.quantity} type='text' defaultValue='1' />
 					<button>DODAJ OD KOSZYKA</button>

@@ -18,10 +18,6 @@
 		padding-right: 1.4em;
 		border-right: 1px solid black;
 
-		@media (min-width: $desktop-width-transform) {
-			display: none;
-		}
-
 		.icon {
 			margin-right: 1.3em;
 		}
@@ -37,20 +33,9 @@
 		.icon {
 			margin-right: .7em;
 		}
-
-		@media (min-width: $desktop-width-transform) {
-			display: none;
-		}
 	}
 
 	.desktop {
-		display: none;
-		color: black;
-
-		@media (min-width: $desktop-width-transform) {
-			display: block;
-		}
-
 		a {
 			text-decoration: none;
 			color: black;

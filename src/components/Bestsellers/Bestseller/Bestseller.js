@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Bestseller.module.scss'
 
+
 export default function Bestseller({ img }) {
 	return (
 		<div className={styles.wrapper}>

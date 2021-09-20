@@ -45,12 +45,7 @@
 		}
 	
 		.search {
-			display: none;
 			position: relative;
-			
-			@media (min-width: $desktop-width-transform) {
-				display: block;
-			}
 	
 			.searchInput {
 				margin-left: 5.8em;
@@ -79,10 +74,6 @@
 			i {
 				font-size: 1.9em;
 				margin: 0 .65rem;
-	
-				@media (min-width: $desktop-width-transform) {
-					display: none;
-				}
 			}
 	
 			.hamburger {
@@ -96,10 +87,6 @@
 				justify-content: center;
 				align-items: center;
 	
-				@media (min-width: $desktop-width-transform) {
-					display: none;
-				}
-	
 				.hamburgerLine {
 					width: 50%;
 					height: .2rem;
@@ -112,25 +99,32 @@
 				line-height: 4.8em;
 	
 				.navBtn {
-					display: none;
-	
-					@media (min-width: $desktop-width-transform) {
-						display: inline-block;
-						margin: 0 1.8em;
-						text-decoration: none;
-						color: black;
-						font-size: 1.1rem;
-						font-weight: bold;
-	
-						:first-child {
-							color: red;
-						}
+					display: inline-block;
+					margin: 0 1.8em;
+					text-decoration: none;
+					color: black;
+					font-size: 1.1rem;
+					font-weight: bold;
+
+					:first-child {
+						color: red;
 					}
 				}
 	
 				.cartBtn {
-					display: none;
-	
+					display: inline-block;
+					margin-left: .3em;
+					height: 5.3rem;
+					width: 15.5rem;
+					padding: 0 1em;
+					border: none;
+					border-radius: 90px;
+					text-decoration: none;
+					color: white;
+					font-size: 1.35rem;
+					font-weight: bold;
+					background-color: $color-blueish;
+
 					i {
 						display: inline-block;
 						font-size: 1.7rem;
@@ -144,43 +138,24 @@
 					.icon {
 						font-size: .85rem;
 					}
-	
-					@media (min-width: $desktop-width-transform) {
-						display: inline-block;
-						margin-left: .3em;
-						height: 5.3rem;
-						width: 15.5rem;
-						padding: 0 1em;
-						border: none;
-						border-radius: 90px;
-						text-decoration: none;
-						color: white;
-						font-size: 1.35rem;
-						font-weight: bold;
-						background-color: $color-blueish;
-					}
 				}
 			}
 		}
 	}
 
 	.menu {
-		display: none;
+		display: flex;
+		justify-content: space-between;
+		// width: 96%;
+		margin-top: .5rem;
+		padding-bottom: 1.6rem;
+		
+		span {
+			font-size: 1.4rem;
+			font-weight: bold;
 
-		@media (min-width: $desktop-width-transform) {
-			display: flex;
-			justify-content: space-between;
-			// width: 96%;
-			margin-top: .5rem;
-			padding-bottom: 1.6rem;
-			
-			span {
-				font-size: 1.4rem;
-				font-weight: bold;
-
-				&:last-of-type {
-					color: $color-orangeish;
-				}
+			&:last-of-type {
+				color: $color-orangeish;
 			}
 		}
 	}
