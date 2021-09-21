@@ -30,12 +30,12 @@ export default function Faq({ title }) {
 			) : (
 				<h1 className={styles.header}>{title}</h1>
 			)}	
-			{open && (
+			{(open || desktopMode) && (
 				<div className={styles.content}>
-					<div>
-						<div className={styles.question} data-open='false' onClick={handleOpenAnswer}>
+					<div className={styles.questions}>
+						<div className={styles.question} data-open='true' onClick={handleOpenAnswer}>
 							<h2>Czy te miseczki mają atesty bezpieczeństwa?</h2>
-							<p>Tak, jest bardzo wytrzymałe. W codziennym użytkowaniu, nie powinno się nic zdarzyć i wszelkiego rodzaju ocierki nie pozostawią głębokich rys na płytce</p>
+							<p>Tak, jest bardzo wytrzymałe. W codzienny użytkowaniu, nie powinno nic się zdarzyć i wszelkiego rodzaju ocierki nie pozostawią głębokich rys na płytce</p>
 						</div>
 						<div className={styles.question} data-open='false'  onClick={handleOpenAnswer}>
 							<h2>Czy te produkty są w 100% ekologiczne?</h2>

@@ -4,8 +4,28 @@
 	padding: 0 1.9em;
 	background-color: white;
 
+	@media (min-width: $desktop-width-transform) {
+		position: relative;
+		max-width: $desktop-wrapper-width;
+		min-height: 508px; // temp?
+		margin: auto;
+		padding: 0;
+		transform: translateX(-1.4em);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -50%;
+			width: 200%;
+			height: 100%;
+			background-color: white;
+			z-index: -1;
+		}
+	}
+
 	.banner {
-		padding: 2.6em 0 2em;
+		padding: 2.7em 0 1.9em;
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid $color-grayish;
@@ -28,6 +48,13 @@
 		font-size: 2.5em;
 		font-weight: normal;
 
+		@media (min-width: $desktop-width-transform) {
+			margin-top: 1.2em;
+			padding-top: 3.2em;
+			text-align: center;
+			transform: translateX(.3em);
+		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -43,41 +70,77 @@
 	.content {
 		padding: .5em 0;
 		border-bottom: 1px solid $color-grayish;
+
+		@media (min-width: $desktop-width-transform) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: .5em;
+			padding-top: 4em;
+			border: 0;
+		}
+		
+		.questions {
+			user-select: none;
+
+			@media (min-width: $desktop-width-transform) {
+				max-width: 65%;
+			}
+			
+			.question {
+				padding: 1em 0;
+				border-bottom: 1px solid $color-grayish;
 	
-		.question {
-			padding: 1em 0;
-			border-bottom: 1px solid $color-grayish;
-
-			&:last-of-type {
-				border: 0;
-			}
-
-			&[data-open='true'] > p {
-				opacity: 1;
-				display: block;
-			}
-
-			h2 {
-				pointer-events: none;
-				font-size: 1.3em;
-				margin-bottom: .2em;
-			}
-
-			p {
-				pointer-events: none;
-				font-size: 1.1em;
-				margin-bottom: 1em;
-				opacity: 0;
-				display: none;
+				@media (min-width: $desktop-width-transform) {
+					margin-bottom: .4em;
+					padding: 1em 0;
+				}
+	
+				&:last-of-type {
+					border: 0;
+				}
+	
+				&[data-open='true'] > p {
+					opacity: 1;
+					display: block;
+				}
+	
+				h2 {
+					
+					pointer-events: none;
+					font-size: 1.3em;
+				}
+	
+				p {
+					pointer-events: none;
+					font-size: 1.1em;
+					margin-top: .2em;
+					margin-bottom: 1em;
+					opacity: 0;
+					display: none;
+	
+					@media (min-width: $desktop-width-transform) {
+						font-size: 1.2em;
+						margin-left: .1em;
+						margin-top: 1.6em;
+						margin-bottom: 1em;
+					}
+				}
 			}
 		}
 
 		.more {
 			position: relative;
-			margin-top: 1em;
+			margin-top: 2em;
 			padding: 2em;
 			background-color: $color-grayish;
 			overflow: hidden;
+
+			@media (min-width: $desktop-width-transform) {
+				margin: 0;
+				padding: 2.7em 1.9em;
+				transform: translate(-2%, -8%);
+			}
 
 			h1 {
 				max-width: 65%;
@@ -90,6 +153,12 @@
 				margin-top: 1em;
 				font-size: 1.2em;
 				font-weight: normal;
+
+				@media (min-width: $desktop-width-transform) {
+					max-width: 55%;
+					margin-top: .9em;
+					margin-left: .1em;
+				}
 			}
 
 			button {
@@ -104,6 +173,10 @@
 				font-family: 'Noto Sans';
 				font-weight: bold;
 				color: $color-blueish;
+
+				@media (min-width: $desktop-width-transform) {
+					width: 57%;
+				}
 			}		
 			
 			i {
@@ -112,6 +185,12 @@
 				right: -20%;
 				font-size: 15em;
 				color: white;
+
+				@media (min-width: $desktop-width-transform) {
+					top: -12.5%;
+					right: -19.5%;
+					font-size: 17em;
+				}
 			}
 		}
 	}
