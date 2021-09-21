@@ -1,0 +1,47 @@
+@import '/src/variables.scss';
+
+.wrapper {
+	padding: 0 1.9em;
+	background-color: white;
+
+	.banner {
+		padding: 2.6em 0 2em;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $color-grayish;
+
+		h1 {
+			max-width: 90%;
+			font-size: 1.6em;
+			font-weight: normal;
+		}
+
+		span {
+			font-size: 1.6em;
+		}
+	}
+
+	.header {
+		position: relative;
+		padding-bottom: .75em;
+		border-bottom: 1px solid $color-grayish;
+		font-size: 2.5em;
+		font-weight: normal;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 8.5em;
+			height: 1px;
+			background-color: orange;
+		}
+	}
+
+	.content {
+		padding: 1em 0;
+		border-bottom: 1px solid $color-grayish;
+	}
+}
