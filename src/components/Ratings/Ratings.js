@@ -24,17 +24,7 @@ export default function Ratings({ title }) {
 			)}	
 			{open && (
 				<div className={styles.content}>
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
-					Hello World!<br />
+					
 				</div>
 			)}
 		</div>

@@ -9,7 +9,7 @@ import Versions from '../Versions/Versions';
 import Description from '../Description/Description';
 import Bestsellers from '../Bestsellers/Bestsellers';
 import Faq from '../Faq/Faq';
-import Ratings from '../Ratings/Ratings';
+// import Ratings from '../Ratings/Ratings';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 			<Description />
 			<Bestsellers titleShort='Bestsellery' titleLong='Zobacz podobne' />
 			<Faq title='Nasi klienci najczęściej pytali o:' />
-			<Ratings title='Opinie o miseczka bambusowa myszka dla dzieci' />
+			{/* <Ratings title='Opinie o miseczka bambusowa myszka dla dzieci' /> */}
 		</div>
 	);
 }
