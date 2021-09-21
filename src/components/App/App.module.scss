@@ -5,10 +5,9 @@
 	overflow-x: hidden;
 
 	.productArea {
-		max-width: $desktop-wrapper-width;
-		margin: auto;
-
 		@media (min-width: $desktop-width-transform) {
+			max-width: $desktop-wrapper-width;
+			margin: auto;
 			display: grid;
 			grid-template-areas: 
 				'gallery buyform'
