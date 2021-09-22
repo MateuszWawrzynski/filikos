@@ -5,6 +5,17 @@
 	padding-bottom: 1em;
 	text-align: center;
 
+	&:last-of-type {
+		.content {
+			padding-bottom: .3em;
+		}
+		
+		@media (min-width: $desktop-width-transform) {
+			transform: translateY(-.8em);
+			padding-bottom: 4.9em;
+		}
+	}
+
 	.header {
 		position: relative;
 		padding-left: .5em;

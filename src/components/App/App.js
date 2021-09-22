@@ -26,6 +26,7 @@ function App() {
 			<Bestsellers titleShort='Bestsellery' titleLong='Zobacz podobne' />
 			<Faq title='Nasi klienci najczęściej pytali o:' />
 			<Ratings title='Opinie o miseczka bambusowa myszka dla dzieci' />
+			<Bestsellers titleShort='Bestsellery' titleLong='Przyda ci się również' />
 		</div>
 	);
 }
