@@ -1,0 +1,82 @@
+@import '/src/variables.scss';
+
+.wrapper {
+	text-align: center;
+
+	.rating {
+		font-size: 2em;
+
+		i {
+			color: $color-orangeish;
+		}
+
+		span {
+			margin-left: .5em;
+			// line-height: 2em;
+			font-weight: bold;
+		}
+	}
+
+	.ratingsCounter {
+		margin-top: .3em;
+		font-size: 1.2em;
+	}
+
+	button {
+		margin: 1.3em 0;
+		// margin-top: 1.3em;
+		width: 100%;
+		height: 4em;
+		border: 2px solid $color-blueish;
+		border-radius: 90px;
+		background-color: white;
+		outline: none;
+		font-size: 1.3em;
+		font-family: 'Noto Sans';
+		font-weight: bold;
+		color: $color-blueish;
+
+		// @media (min-width: $desktop-width-transform) {
+		// 	width: 57%;
+		// }
+	}
+
+	.mark {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		span {
+			font-size: 1.2em;
+		}
+
+		i {
+			color: $color-orangeish;
+		}
+
+		.progressBar {
+			width: 80%;
+			height: .7em;
+			background-color: $color-grayish;
+			border-radius: 90px;
+
+			div {
+				width: 50%;
+				height: 100%;
+				background-color: $color-blueish;
+				border-radius: 90px;
+			}
+		}
+
+		span:last-of-type {
+			width: 2em;
+			text-align: right;
+		}
+	}
+
+	.info {
+		margin-top: 1em;
+		font-size: 1.2em;
+		text-align: left;
+	}
+}
