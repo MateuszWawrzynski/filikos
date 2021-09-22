@@ -4,6 +4,26 @@
 	padding: 0 1.9em;
 	background-color: white;
 
+	@media (min-width: $desktop-width-transform) {
+		position: relative;
+		max-width: $desktop-wrapper-width;
+		margin: auto;
+		padding: 0;
+		padding-bottom: 9.2em;
+		transform: translateX(-1.6%);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -50%;
+			width: 200%;
+			height: 100%;
+			background-color: white;
+			z-index: -1;
+		}
+	}
+
 	.banner {
 		padding: 2.6em 0 2em;
 		display: flex;
@@ -27,6 +47,8 @@
 		border-bottom: 1px solid $color-grayish;
 		font-size: 2.5em;
 		font-weight: normal;
+		text-align: center;
+		transform: translate(.5em, -.3em);
 
 		&:after {
 			content: '';
@@ -44,9 +66,25 @@
 		padding: 1.5em 1em;
 		border-bottom: 1px solid $color-grayish;
 
+		@media (min-width: $desktop-width-transform) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: .5em;
+			padding: 0;
+			padding-top: 2em;
+			border: 0;
+		}
+
 		.comments {
 			margin-top: 3em;
 			border-top: 1px solid black;
+
+			@media (min-width: $desktop-width-transform) {
+				margin: 0;
+				border: 0;
+				width: 68.5%;
+			}
 		}
 	}
 }

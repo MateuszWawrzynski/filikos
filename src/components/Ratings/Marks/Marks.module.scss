@@ -3,8 +3,18 @@
 .wrapper {
 	text-align: center;
 
+	@media (min-width: $desktop-width-transform) {
+		width: 24%;
+		margin-top: 3.3em;
+	}
+
 	.rating {
 		font-size: 2em;
+
+		@media (min-width: $desktop-width-transform) {
+			font-size: 2.2em;
+			transform: translateX(-.5em);
+		}
 
 		i {
 			color: $color-orangeish;
@@ -20,11 +30,16 @@
 	.ratingsCounter {
 		margin-top: .3em;
 		font-size: 1.2em;
+
+		@media (min-width: $desktop-width-transform) {
+			margin-top: .4em;
+			font-size: 1.3em;
+			transform: translateX(-.5em);
+		}
 	}
 
 	button {
 		margin: 1.3em 0;
-		// margin-top: 1.3em;
 		width: 100%;
 		height: 4em;
 		border: 2px solid $color-blueish;
@@ -36,9 +51,10 @@
 		font-weight: bold;
 		color: $color-blueish;
 
-		// @media (min-width: $desktop-width-transform) {
-		// 	width: 57%;
-		// }
+		@media (min-width: $desktop-width-transform) {
+			width: 95%;
+			margin: 1.7em 0 1.2em;
+		}
 	}
 
 	.mark {
@@ -46,12 +62,24 @@
 		justify-content: space-between;
 		align-items: center;
 
+		@media (min-width: $desktop-width-transform) {
+			margin-bottom: .2em;
+		}
+
 		span {
 			font-size: 1.2em;
+
+			@media (min-width: $desktop-width-transform) {
+				font-size: 1.3em;
+			}
 		}
 
 		i {
 			color: $color-orangeish;
+
+			@media (min-width: $desktop-width-transform) {
+				margin: 0 .5em;
+			}
 		}
 
 		.progressBar {
@@ -60,8 +88,11 @@
 			background-color: $color-grayish;
 			border-radius: 90px;
 
+			@media (min-width: $desktop-width-transform) {
+				width: 73%;
+			}
+
 			div {
-				width: 50%;
 				height: 100%;
 				background-color: $color-blueish;
 				border-radius: 90px;
@@ -71,6 +102,12 @@
 		span:last-of-type {
 			width: 2em;
 			text-align: right;
+
+			@media (min-width: $desktop-width-transform) {
+				width: 2em;
+				font-size: 1.2em;
+				margin-right: 1em;
+			}
 		}
 	}
 
@@ -78,5 +115,10 @@
 		margin-top: 1em;
 		font-size: 1.2em;
 		text-align: left;
+
+		@media (min-width: $desktop-width-transform) {
+			margin-top: 1.6em;
+			font-size: 1.3em;
+		}
 	}
 }

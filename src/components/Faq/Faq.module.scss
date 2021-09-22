@@ -43,17 +43,14 @@
 
 	.header {
 		position: relative;
+		margin-top: 1.2em;
+		padding-top: 3.2em;
 		padding-bottom: .75em;
 		border-bottom: 1px solid $color-grayish;
 		font-size: 2.5em;
 		font-weight: normal;
-
-		@media (min-width: $desktop-width-transform) {
-			margin-top: 1.2em;
-			padding-top: 3.2em;
-			text-align: center;
-			transform: translateX(.3em);
-		}
+		text-align: center;
+		transform: translateX(.3em);
 
 		&:after {
 			content: '';
