@@ -6,11 +6,11 @@ import useDesktopView from '../../hooks/useDesktopView'
 import Bestseller from './Bestseller/Bestseller'
 
 
-export default function Bestsellers({ titleShort, titleLong }) {
+export default function Bestsellers({ titleShort, titleLong, second }) {
 	const desktopMode = useDesktopView()
 	
 	return (
-		<div className={styles.wrapper}>
+		<div className={`${styles.wrapper} ${second ? styles.second : ''}`}>
 			{!desktopMode ? (
 				<h1 className={styles.header}>{titleShort}</h1>
 			) : (

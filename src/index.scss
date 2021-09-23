@@ -18,4 +18,11 @@ body {
 	box-sizing: border-box;
 	background-color: $color-whiteish;
 	font-family: 'Noto Sans';
+
+	i {
+		font-family: 'fontello';
+		font-size: 1em;
+		font-style: normal;
+		text-decoration: none;
+	}
 }

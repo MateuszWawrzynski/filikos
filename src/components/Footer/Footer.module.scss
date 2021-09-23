@@ -1,0 +1,88 @@
+@import '/src/variables.scss';
+
+.wrapper {
+	// min-height: 755px; // temp
+	padding: 2.5em 0;
+	background-color: $color-blueish;
+	color: white;
+	text-align: center;
+
+	.menu {
+		.section {
+			.title {
+				padding: .6em 0;
+				
+				&[data-open='true'] + .links {
+					opacity: 1;
+					display: block;
+				}
+			}
+
+			.links {
+				display: none;
+				opacity: 0;
+				margin: 1.4em 0;
+
+				p {
+					padding: .45em 0;
+
+					i {
+						display: none;
+					}
+
+					a {
+						font-size: 1.3em;
+						color: white;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.info {
+				margin: .7em 0;
+
+				i {
+					margin: 0 .12em;
+					font-size: 4.8em;
+					color: $color-orangeish;
+				}
+
+				.contact {
+					margin-top: 2em;
+
+					h2 {
+						font-size: 2em;
+					}
+
+					p {
+						font-size: 1.3em;
+					}
+				}
+			}
+		}
+	}
+
+	.banks {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		margin-top: 2.5em;
+
+		a {
+			margin: 1.5em .4em;
+
+			img {
+				width: 100%;
+			}
+		}
+
+	}
+
+	.banner {
+		img {
+			margin-top: .5em;
+		}
+	}
+}

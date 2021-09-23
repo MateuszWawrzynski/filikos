@@ -10,6 +10,7 @@ import Description from '../Description/Description';
 import Bestsellers from '../Bestsellers/Bestsellers';
 import Faq from '../Faq/Faq';
 import Ratings from '../Ratings/Ratings';
+import Footer from '../Footer/Footer';
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
 			<Bestsellers titleShort='Bestsellery' titleLong='Zobacz podobne' />
 			<Faq title='Nasi klienci najczęściej pytali o:' />
 			<Ratings title='Opinie o miseczka bambusowa myszka dla dzieci' />
-			<Bestsellers titleShort='Bestsellery' titleLong='Przyda ci się również' />
+			<Bestsellers titleShort='Bestsellery' titleLong='Przyda ci się również' second={true} />
+			<Footer />
 		</div>
 	);
 }
