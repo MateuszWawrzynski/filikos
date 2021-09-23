@@ -1,16 +1,54 @@
 @import '/src/variables.scss';
 
 .wrapper {
-	// min-height: 755px; // temp
 	padding: 2.5em 0;
 	background-color: $color-blueish;
 	color: white;
 	text-align: center;
 
+	@media (min-width: $desktop-width-transform) {
+		position: relative;
+		max-width: $desktop-wrapper-width;
+		margin: auto;
+		padding: 4.6em 0;
+		transform: translateX(-1.4em);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -50%;
+			width: 200%;
+			height: 100%;
+			background-color: $color-blueish;
+			z-index: -1;
+		}
+	}
+
 	.menu {
+		@media (min-width: $desktop-width-transform) {
+			display: flex;
+		}
+
 		.section {
+			@media (min-width: $desktop-width-transform) {
+				width: 25%;
+				margin-left: 4em;
+				text-align: left;
+
+				&:first-of-type {
+					margin-left: .7em;
+					margin-right: .6em;
+				}
+			}	
+
 			.title {
 				padding: .6em 0;
+
+				@media (min-width: $desktop-width-transform) {
+					margin-left: .1em;
+					font-size: 1.6em;
+				}
 				
 				&[data-open='true'] + .links {
 					opacity: 1;
@@ -23,11 +61,24 @@
 				opacity: 0;
 				margin: 1.4em 0;
 
+				@media (min-width: $desktop-width-transform) {
+					display: block;
+					opacity: 1;
+					margin: .6em 0;
+				}
+
 				p {
 					padding: .45em 0;
 
 					i {
 						display: none;
+						color: $color-yellowish;
+
+						@media (min-width: $desktop-width-transform) {
+							display: inline-block;
+							width: 2.1em;
+							font-size: 1.3em;
+						}
 					}
 
 					a {
@@ -41,17 +92,37 @@
 			.info {
 				margin: .7em 0;
 
+				@media (min-width: $desktop-width-transform) {
+					margin: .9em 0;
+				}
+
 				i {
 					margin: 0 .12em;
 					font-size: 4.8em;
-					color: $color-orangeish;
+					color: $color-yellowish;
+
+					@media (min-width: $desktop-width-transform) {
+						margin-left: .06em;
+						margin-right: .23em;
+						font-size: 4em;
+					}
 				}
 
 				.contact {
 					margin-top: 2em;
 
+					@media (min-width: $desktop-width-transform) {
+						margin-top: 2.5em;
+						margin-left: .15em; 
+					}
+
 					h2 {
 						font-size: 2em;
+						
+						a {
+							color: white;
+							text-decoration: none;
+						}
 					}
 
 					p {
@@ -62,27 +133,58 @@
 		}
 	}
 
-	.banks {
+	.services {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
 
-		margin-top: 2.5em;
+		.banks {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2.5em;
 
-		a {
-			margin: 1.5em .4em;
+			@media (min-width: $desktop-width-transform) {
+				order: 2;
+				justify-content: flex-start;
+				margin-top: 2.1em;
+			}
 
-			img {
-				width: 100%;
+			a {
+				margin: 1.5em .4em;
+
+				@media (min-width: $desktop-width-transform) {
+					margin-right: 1.2em;
+				}
 			}
 		}
 
-	}
+		.banner {
+			@media (min-width: $desktop-width-transform) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 4.3em;
+				margin-left: .5em;
+			}
 
-	.banner {
-		img {
-			margin-top: .5em;
+			p {
+				font-size: 1.4em;
+			}
+
+			.line {
+				width: 63%;
+				height: 1px;
+				background-color: $color-grayish;
+			}
+
+			img {
+				margin-top: .5em;
+
+				@media (min-width: $desktop-width-transform) {
+					transform: translate(.9em, -.5em);
+				}
+			}
 		}
 	}
 }

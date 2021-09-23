@@ -56,30 +56,32 @@ export default function Footer() {
 							<i className='icon-instagram-(7)'></i>
 						</div>
 						<div className={styles.contact}>
-							<h2>575848808</h2>
-							<h2>sklep@filikos.pl</h2>
+							<h2><a href='callto:'>575848808</a></h2>
+							<h2><a href='mailto:'>sklep@filikos.pl</a></h2>
 							<p>pn-pt 8.00-16.00</p>
-							<p>sb 8:00-14:00)</p>
+							<p>sb 8:00-14:00</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className={styles.banks}>
-				<a href='/'><img src='./assets/icons/banks/alior-bank.svg' alt='logo-alior-bank' /></a>
-				<a href='/'><img src='./assets/icons/banks/inteligo.svg' alt='logo-inteligo' /></a>
-				<a href='/'><img src='./assets/icons/banks/bank-pekao.svg' alt='logo-bank-pekao' /></a>
-				<a href='/'><img src='./assets/icons/banks/ipko.svg' alt='logo-ipko' /></a>
-				<a href='/'><img src='./assets/icons/banks/millennium.svg' alt='logo-millennium' /></a>
-				<a href='/'><img src='./assets/icons/banks/citi-handlowy.svg' alt='logo-citi-handlowy' /></a>
-				<a href='/'><img src='./assets/icons/banks/mbank.svg' alt='logo-mbank' /></a>
-				<a href='/'><img src='./assets/icons/banks/ing.svg' alt='logo-ing' /></a>
-			</div>
-			<div className={styles.banner}>
-				{desktopMode && (<>
-					<p></p>
-					<div></div>
-				</>)}
-				<img src='./assets/icons/powered_by_IdoSell_black.svg' alt='idosell' />
+			<div className={styles.services}>
+				<div className={styles.banks}>
+					<a href='/'><img src='./assets/icons/banks/alior-bank.svg' alt='logo-alior-bank' /></a>
+					<a href='/'><img src='./assets/icons/banks/inteligo.svg' alt='logo-inteligo' /></a>
+					<a href='/'><img src='./assets/icons/banks/bank-pekao.svg' alt='logo-bank-pekao' /></a>
+					<a href='/'><img src='./assets/icons/banks/ipko.svg' alt='logo-ipko' /></a>
+					<a href='/'><img src='./assets/icons/banks/millennium.svg' alt='logo-millennium' /></a>
+					<a href='/'><img src='./assets/icons/banks/citi-handlowy.svg' alt='logo-citi-handlowy' /></a>
+					<a href='/'><img src='./assets/icons/banks/mbank.svg' alt='logo-mbank' /></a>
+					<a href='/'><img src='./assets/icons/banks/ing.svg' alt='logo-ing' /></a>
+				</div>
+				<div className={styles.banner}>
+					{desktopMode && (<>
+						<p>Filikos , al. Kwiatowa 30, 71-065 Szczecin</p>
+						<div className={styles.line}></div>
+					</>)}
+					<img src='./assets/icons/powered_by_IdoSell_black.svg' alt='idosell' />
+				</div>
 			</div>
 		</footer>
 	)
