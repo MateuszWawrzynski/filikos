@@ -12,17 +12,23 @@
 
 html {
 	font-size: .625rem;
-}
 
-body {
-	box-sizing: border-box;
-	background-color: $color-whiteish;
-	font-family: 'Noto Sans';
+	body {
+		box-sizing: border-box;
+		background-color: $color-whiteish;
+		font-family: 'Noto Sans';
+	
+		i {
+			font-family: 'fontello';
+			font-size: 1em;
+			font-style: normal;
+			text-decoration: none;
+		}
 
-	i {
-		font-family: 'fontello';
-		font-size: 1em;
-		font-style: normal;
-		text-decoration: none;
+		// input[type='text']:hover, 
+		input[type='text']:focus,
+		input[type='text']:active {
+			border: 1px solid $color-orangeish;
+		}
 	}
 }

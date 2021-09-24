@@ -52,10 +52,16 @@
 				padding: 0 1.6rem .4em;
 				height: 4.3rem;
 				width: 34.5rem;
-				border: none;
+				border: 2px solid $color-whiteish;
 				border-radius: 90px;
 				background-color: $color-whiteish;
 				outline: none;
+				
+				transition-duration: .15s;
+				&:focus,
+				&:active {
+					border: 2px solid $color-orangeish;
+				}
 			}
 	
 			i {
@@ -105,9 +111,10 @@
 					color: black;
 					font-size: 1.1rem;
 					font-weight: bold;
+					// transition-duration: .15s;
 
-					:first-child {
-						color: red;
+					&:hover {
+						border-bottom: 2px solid $color-orangeish;
 					}
 				}
 	
@@ -124,6 +131,12 @@
 					font-size: 1.35rem;
 					font-weight: bold;
 					background-color: $color-blueish;
+					transition-duration: .2s;
+
+					&:hover {
+						color: $color-orangeish;
+						> .value { border-bottom: 1px solid $color-orangeish; }	
+					}
 
 					i {
 						display: inline-block;
@@ -148,14 +161,21 @@
 		justify-content: space-between;
 		// width: 96%;
 		margin-top: .5rem;
-		padding-bottom: 1.6rem;
+		padding-bottom: 1.4rem;	
 		
 		span {
 			font-size: 1.4rem;
 			font-weight: bold;
+			cursor: pointer;
+			border-bottom: 2px solid white;
+			transition-duration: .25s;
 
 			&:last-of-type {
 				color: $color-orangeish;
+			}
+
+			&:hover {
+				border-bottom: 2px solid $color-orangeish;
 			}
 		}
 	}
