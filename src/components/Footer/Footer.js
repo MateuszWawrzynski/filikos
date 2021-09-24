@@ -10,6 +10,13 @@ export default function Footer() {
 	const handleOpen = e => {
 		if(e.target.dataset.open === 'false') e.target.dataset.open = 'true'
 		else e.target.dataset.open = 'false'
+		
+		// if(e.target.dataset.open === 'true') {
+		// 	e.target.dataset.open = 'false'
+		// } else {
+		// 	document.querySelectorAll(`.${styles.title}`).forEach(item => item.dataset.open = 'false')
+		// 	e.target.dataset.open = 'true'
+		// }
 	}
 
 	return (

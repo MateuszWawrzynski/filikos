@@ -16,8 +16,12 @@ export default function Faq({ title }) {
 		// i don't know why i couldn't operate on booleans, but it doesn't work
 		// e.target.dataset.open = !e.target.dataset.open
 
-		if(e.target.dataset.open === 'false') e.target.dataset.open = 'true'
-		else e.target.dataset.open = 'false'
+		if(e.target.dataset.open === 'true') {
+			e.target.dataset.open = 'false'
+		} else {
+			document.querySelectorAll(`.${styles.question}`).forEach(item => item.dataset.open = 'false')
+			e.target.dataset.open = 'true'
+		}
 	}
 	
 	return (

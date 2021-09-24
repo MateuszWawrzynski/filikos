@@ -48,7 +48,10 @@
 		padding: 2em 1.9em;
 
 		@media (min-width: $desktop-width-transform) {
-			padding: 2.5em 36.5em;
+			// padding: 2.5em 36.5em;
+			padding: 2.5em 0;
+			max-width: $desktop-wrapper-width;
+			margin: auto;
 			transform: translateX(-.75%);
 		}
 	}
