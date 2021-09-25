@@ -10,10 +10,10 @@ export default function Breadcrumbs() {
 	return (
 		<nav className={styles.wrapper}>
 			{!desktopMode ? (<>
-				<div className={styles.backwards}>
+				<a href='/' className={styles.backwards}>
 					<span className={styles.icon}>&lt;</span>
 					<span>Wstecz</span>
-				</div>		
+				</a>		
 				<p className={styles.location}>
 					Jesteś tutaj: 
 					<span className={styles.category}>Czujki ruchu alarmowe</span>
@@ -22,13 +22,13 @@ export default function Breadcrumbs() {
 				</p>
 			</>) : (
 				<div className={styles.desktop}>
-					<a href='/'>Strona główna</a>
+					<a href='/' title='Wróć na stronę główną'>Strona główna</a>
 					<span>/</span>
-					<a href='/'>Dziecko</a>
+					<a href='/' title='Wróć do kategorii "Dziecko"'>Dziecko</a>
 					<span>/</span>
-					<a href='/'>Zastawa stołowa</a>
+					<a href='/' title='Wróć do kategorii "Zastawa stołowa"'>Zastawa stołowa</a>
 					<span>/</span>
-					<a href='/'>Bambusowe naczynia dla dzieci</a>
+					<a href='/' title='Wróć do kategorii "Bambusowe naczynia dla dzieci"'>Bambusowe naczynia dla dzieci</a>
 				</div>
 			)}
 		</nav>

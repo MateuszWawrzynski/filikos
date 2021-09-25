@@ -17,6 +17,8 @@
 		margin-right: 1.1em;
 		padding-right: 1.4em;
 		border-right: 1px solid black;
+		color: black;
+		text-decoration: none;
 
 		.icon {
 			margin-right: 1.3em;
@@ -39,6 +41,11 @@
 		a {
 			text-decoration: none;
 			color: black;
+			transition-duration: .1s;
+
+			&:hover {
+				color: $color-orangeish;
+			}
 		}
 
 		span {
