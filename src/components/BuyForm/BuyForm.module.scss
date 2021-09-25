@@ -73,6 +73,7 @@
 			img {
 				margin-right: 1em;
 				padding: .3em;
+				cursor: pointer;
 			}
 
 			.active {
@@ -98,6 +99,11 @@
 			margin-left: .05em;
 			font-size: 1.3em;
 			color: black;
+
+			transition-duration: .1s;
+			&:hover {
+				color: $color-orangeish;
+			}
 		}
 	}
 
@@ -135,6 +141,14 @@
 			color: white;
 			font-family: 'Amatic SC';
 			font-size: 1.8em;
+
+			animation: blink 1.5s ease-out infinite alternate;
+			@keyframes blink {
+				0% { color: red; }
+				50% { color: white; }
+				75% { color: white; }
+				100% { color: white; }
+			}
 		}
 
 		.instalments {
@@ -142,6 +156,11 @@
 			font-size: 1.3em;
 			color: black;
 			margin-left: 1.6em;
+
+			transition-duration: .1s;
+			&:hover {
+				color: $color-orangeish;
+			}
 		}
 	}
 
@@ -163,6 +182,11 @@
 
 		.saveLater {
 			width: 5em;
+
+			transition-duration: .1s;
+			&:hover {
+				color: $color-orangeish;
+			}
 		}
 
 		.form {
@@ -174,6 +198,7 @@
 			}
 
 			.quantity {
+				position: relative;
 				width: 3.4em;
 				aspect-ratio: 1;
 				border: none;
@@ -185,6 +210,7 @@
 			}
 
 			button {
+				position: relative;
 				margin-left: 1em;
 				height: 4em;
 				padding: 0 5.5em;
@@ -201,6 +227,41 @@
 					margin-left: 1em;
 					margin-right: .8em;
 					padding: 0 4.95em 0 6.4em;
+					cursor: pointer;
+					z-index: 1;
+
+					transition-duration: .15s;
+					&:hover {
+						color: $color-orangeish;
+						text-decoration: underline;
+					}
+
+					&.animate:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						transform: translateY(50%);
+						width: 100%;
+						height: 100%;
+						border-radius: 90px;
+						background-color: $color-orangeish;
+						z-index: -1;
+						opacity: 0;
+
+						animation: submit .5s ease-out;
+					}
+
+					@keyframes submit {
+						from {
+							// transform: translateY(50%);
+							opacity: 1;
+						}
+						to {
+							transform: translateY(0);
+							opacity: 0;
+						}
+					}
 				}
 			}
 		}
@@ -221,6 +282,18 @@
 
 		li {
 			margin-bottom: .55em;
+
+			animation: carousel 3s infinite;
+			&:nth-child(1) { animation-delay: 0; }	// 0-1
+			&:nth-child(2) { animation-delay: 1s; } // 1-2
+			&:nth-child(3) { animation-delay: 2s; } // 2-3
+
+			@keyframes carousel {
+				0% { color: $color-orangeish; }
+				33% { color: $color-orangeish; }
+				34% { color: black; }
+				100% { color: black; }
+			}
 			
 			i,p {
 				display: inline-block;

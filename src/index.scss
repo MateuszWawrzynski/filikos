@@ -24,5 +24,13 @@ html {
 			font-style: normal;
 			text-decoration: none;
 		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button,
+		input[type=number] {
+			-webkit-appearance: none;
+			-moz-appearance: textfield;
+			margin: 0;
+		}
 	}
 }
