@@ -230,36 +230,35 @@
 					cursor: pointer;
 					z-index: 1;
 
-					transition-duration: .15s;
 					&:hover {
-						color: $color-orangeish;
 						text-decoration: underline;
 					}
 
 					&.animate:before {
-						content: '';
+						content: 'DODANO!';
 						position: absolute;
 						top: 0;
 						left: 0;
-						transform: translateY(50%);
+						transform: translateY(-25%);
 						width: 100%;
 						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 						border-radius: 90px;
 						background-color: $color-orangeish;
-						z-index: -1;
 						opacity: 0;
-
-						animation: submit .5s ease-out;
-					}
-
-					@keyframes submit {
-						from {
-							// transform: translateY(50%);
-							opacity: 1;
-						}
-						to {
-							transform: translateY(0);
-							opacity: 0;
+	
+						animation: submit 1s ease-out;
+						@keyframes submit {
+							from {
+								// transform: translateY(-25%);
+								opacity: 1;
+							}
+							to {
+								transform: translateY(-100%);
+								opacity: 0;
+							}
 						}
 					}
 				}
@@ -283,15 +282,16 @@
 		li {
 			margin-bottom: .55em;
 
-			animation: carousel 3s infinite;
-			&:nth-child(1) { animation-delay: 0; }	// 0-1
-			&:nth-child(2) { animation-delay: 1s; } // 1-2
-			&:nth-child(3) { animation-delay: 2s; } // 2-3
+			animation: carousel 4s infinite;
+			&:nth-child(1) { animation-delay: 0; }	// 0-1 s
+			&:nth-child(2) { animation-delay: 1s; } // 1-2 s
+			&:nth-child(3) { animation-delay: 2s; } // 2-3 s
+				// pause							// 3-4 s
 
 			@keyframes carousel {
 				0% { color: $color-orangeish; }
-				33% { color: $color-orangeish; }
-				34% { color: black; }
+				25% { color: $color-orangeish; }
+				26% { color: black; }
 				100% { color: black; }
 			}
 			

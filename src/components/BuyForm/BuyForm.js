@@ -16,8 +16,8 @@ export default function BuyForm() {
 	}
 
 	const handleButtonClick = e => {
-		const d = document.querySelector(`.${styles.form} > button`)
-		d.classList.add(styles.animate)
+		e.target.classList.add(styles.animate)
+		setTimeout(() => e.target.classList.remove(styles.animate), 1000)
 	}
 
 	return (

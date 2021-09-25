@@ -3,6 +3,11 @@ import styles from './Version.module.scss'
 
 
 export default function Version({ photo, price }) {
+	const handleButtonClick = e => {
+		e.target.classList.add(styles.animate)
+		setTimeout(() => e.target.classList.remove(styles.animate), 1000)
+	}
+	
 	return (
 		<div className={styles.wrapper}>
 			<img className={styles.photo} src={photo} alt='version' />
@@ -14,8 +19,8 @@ export default function Version({ photo, price }) {
 				</p>
 				<p className={styles.price}>{price.toFixed(2).replace('.', ',')} zł / szt.</p>
 				<div className={styles.form}>
-					<input className={styles.quantity} type='text' defaultValue='1' />
-					<button>DO KOSZYKA</button>
+					<input className={styles.quantity} type='number' defaultValue='1' />
+					<button onClick={handleButtonClick} title='Dodaj ten produkt do koszyka'>DO KOSZYKA</button>
 				</div>
 			</div>
 		</div>
