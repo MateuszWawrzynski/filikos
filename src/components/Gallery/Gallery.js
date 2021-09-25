@@ -15,7 +15,7 @@ export default function Gallery() {
 					<img src='./assets/photos/thumb-2.png' alt='thumb' />
 					<img src='./assets/photos/thumb-3.png' alt='thumb' />
 					<img src='./assets/photos/thumb-4.png' alt='thumb' />
-					<div className={styles.more}>
+					<div className={styles.more} title='Wyświetł pełną galerię produktu'>
 						<span>+3</span><br />
 						<span>zdjęcia</span>
 					</div>
