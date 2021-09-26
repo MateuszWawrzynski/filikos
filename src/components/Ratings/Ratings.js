@@ -66,7 +66,7 @@ export default function Ratings({ title }) {
 	]
 	
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			{!desktopMode ? (
 				<div className={styles.banner} onClick={handleClick}>
 					<h1>{title}</h1>
@@ -85,6 +85,6 @@ export default function Ratings({ title }) {
 					</div>
 				</div>
 			)}
-		</div>
+		</section>
 	)
 }

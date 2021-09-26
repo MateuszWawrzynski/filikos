@@ -4,9 +4,9 @@ import styles from './Description.module.scss'
 
 export default function Description() {
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			<h1 className={styles.header}>W zestawie kupisz taniej</h1>
-			<div className={styles.combo}>			
+			<article className={styles.combo}>			
 				<div className={styles.comboImg}>
 					<img src='./assets/photos/photo_3a.png' alt='combo-1' />
 					<span>+</span>
@@ -19,8 +19,8 @@ export default function Description() {
 					</div>
 					<button>ZOBACZ OFERTĘ</button>
 				</div>
-			</div>
-			<div className={styles.content}>
+			</article>
+			<article className={styles.content}>
 				<div className={styles.about}>
 					<img className={styles.photo} src='./assets/photos/thumb-4.png' alt='main' />
 					<div className={styles.description}>
@@ -77,7 +77,7 @@ export default function Description() {
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</article>
+		</section>
 	)
 }

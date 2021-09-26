@@ -8,9 +8,9 @@ export default function Gallery() {
 	const desktopMode = useDesktopView()
 
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			{desktopMode && (<>
-				<div className={styles.thumbs}>
+				<aside className={styles.thumbs}>
 					<img src='./assets/photos/thumb-1.png' alt='thumb' />
 					<img src='./assets/photos/thumb-2.png' alt='thumb' />
 					<img src='./assets/photos/thumb-3.png' alt='thumb' />
@@ -19,10 +19,10 @@ export default function Gallery() {
 						<span>+3</span><br />
 						<span>zdjęcia</span>
 					</div>
-				</div>
+				</aside>
 				<span className={styles.bestseller}>BESTSELLER</span>
 			</>)}
 			<img className={styles.photo} src='./assets/photos/photo_1.png' alt='gallery' />	
-		</div>
+		</section>
 	)
 }

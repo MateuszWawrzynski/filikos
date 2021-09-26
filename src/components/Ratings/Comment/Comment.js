@@ -4,7 +4,7 @@ import styles from './Comment.module.scss'
 
 export default function Comment({ data: { rate, text, date, authorName, city, vote }}) {
 	return (
-		<div className={styles.wrapper}>
+		<article className={styles.wrapper}>
 			<div className={styles.rating}>
 				{/* https://stackoverflow.com/a/68029192/14536846 */}
 				{Array.from({ length: rate }, (_, i) => <i key={i} className='icon-star' />)}
@@ -20,6 +20,6 @@ export default function Comment({ data: { rate, text, date, authorName, city, vo
 					<span><i className='icon-thumbs-down' /> Nie ({vote.dislikes})</span>
 				</p>
 			</div>
-		</div>
+		</article>
 	)
 }

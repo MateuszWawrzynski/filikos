@@ -10,7 +10,7 @@ export default function Bestsellers({ titleShort, titleLong, second }) {
 	const desktopMode = useDesktopView()
 	
 	return (
-		<div className={`${styles.wrapper} ${second ? styles.second : ''}`}>
+		<section className={`${styles.wrapper} ${second ? styles.second : ''}`}>
 			{!desktopMode ? (
 				<h1 className={styles.header}>{titleShort}</h1>
 			) : (
@@ -22,6 +22,6 @@ export default function Bestsellers({ titleShort, titleLong, second }) {
 				<Bestseller img='./assets/photos/hs_3.png' />
 				<Bestseller img='./assets/photos/hs_4.png' />
 			</div>
-		</div>
+		</section>
 	)
 }

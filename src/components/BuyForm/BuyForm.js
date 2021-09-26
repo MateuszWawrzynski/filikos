@@ -21,7 +21,7 @@ export default function BuyForm() {
 	}
 
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			<div className={styles.header}>
 				<div className={styles.title}>
 					<h1>Bambusowe Naczynia<br /> dla Dzieci Ambition Junior Alex</h1>
@@ -75,6 +75,6 @@ export default function BuyForm() {
 					<p><strong>Szybka dostawa w 48h</strong></p>
 				</li>
 			</ul>
-		</div>
+		</section>
 	)
 }

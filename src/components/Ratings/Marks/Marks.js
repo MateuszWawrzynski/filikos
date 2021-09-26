@@ -4,7 +4,7 @@ import styles from './Marks.module.scss'
 
 export default function Marks({ data: { marks, combined }}) {
 	return (
-		<div className={styles.wrapper}>
+		<aside className={styles.wrapper}>
 			<div className={styles.rating}>
 				<i className='icon-star' />
 				<i className='icon-star' />
@@ -60,6 +60,6 @@ export default function Marks({ data: { marks, combined }}) {
 				</div>
 			</div>
 			<p className={styles.info}>Kliknij ocenę, aby filtrować opinie</p>
-		</div>
+		</aside>
 	)
 }

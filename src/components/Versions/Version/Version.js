@@ -9,7 +9,7 @@ export default function Version({ photo, price }) {
 	}
 	
 	return (
-		<div className={styles.wrapper}>
+		<article className={styles.wrapper}>
 			<img className={styles.photo} src={photo} alt='version' />
 			<div className={styles.content}>
 				<h2 className={styles.title}>Bambusowe Naczynia<br /> dla Dzieci Ambition Junior Alex</h2>
@@ -23,6 +23,6 @@ export default function Version({ photo, price }) {
 					<button onClick={handleButtonClick} title='Dodaj ten produkt do koszyka'>DO KOSZYKA</button>
 				</div>
 			</div>
-		</div>
+		</article>
 	)
 }

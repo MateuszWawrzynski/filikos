@@ -18,12 +18,14 @@ function App() {
 		<div className={styles.wrapper}>
 			<Header />
 			<Breadcrumbs />
-			<div className={styles.productArea}>
-				<Gallery />
-				<BuyForm />
-				<Versions />
-			</div>
-			<Description />
+			<main>
+				<div className={styles.productArea}>
+					<Gallery />
+					<BuyForm />
+					<Versions />
+				</div>
+				<Description />
+			</main>
 			<Bestsellers titleShort='Bestsellery' titleLong='Zobacz podobne' />
 			<Faq title='Nasi klienci najczęściej pytali o:' />
 			<Ratings title='Opinie o miseczka bambusowa myszka dla dzieci' />

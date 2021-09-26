@@ -25,7 +25,7 @@ export default function Faq({ title }) {
 	}
 	
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			{!desktopMode ? (
 				<div className={styles.banner} onClick={handleClick}>
 					<h1>{title}</h1>
@@ -36,7 +36,7 @@ export default function Faq({ title }) {
 			)}	
 			{(open || desktopMode) && (
 				<div className={styles.content}>
-					<div className={styles.questions}>
+					<article className={styles.questions}>
 						<div className={styles.question} data-open='true' onClick={handleOpenAnswer}>
 							<h2>Czy te miseczki mają atesty bezpieczeństwa?</h2>
 							<p>Tak, jest bardzo wytrzymałe. W codzienny użytkowaniu, nie powinno nic się zdarzyć i wszelkiego rodzaju ocierki nie pozostawią głębokich rys na płytce</p>
@@ -49,15 +49,15 @@ export default function Faq({ title }) {
 							<h2>Czy miseczki nie uczulą 6 miesięcznego dziecka?</h2>
 							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam dignissimos perspiciatis voluptatum doloremque modi. Voluptates unde fugiat</p>
 						</div>
-					</div>
-					<div className={styles.more}>
+					</article>
+					<aside className={styles.more}>
 						<h1>Masz pytanie na temat tego produktu?</h1>
 						<h3>Nasi specjaliści chętnie udzielą Ci potrzebnych informacji.</h3>
 						<button>ZADAJ PYTANIE</button>
 						<i className='icon-question' />
-					</div>
+					</aside>
 				</div>
 			)}
-		</div>
+		</section>
 	)
 }
