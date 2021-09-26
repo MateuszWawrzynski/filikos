@@ -6,13 +6,15 @@
 	text-align: center;
 
 	&.second {
+		padding-bottom: .8em;
+
 		.content {
-			padding-bottom: .3em;
+			padding-bottom: 0;
 		}
 		
 		@media (min-width: $desktop-width-transform) {
 			transform: translateY(-.8em);
-			padding-bottom: 4.2em;
+			padding-bottom: 4.6em;
 		}
 	}
 

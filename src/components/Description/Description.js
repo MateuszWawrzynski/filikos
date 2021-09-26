@@ -22,6 +22,7 @@ export default function Description() {
 			</article>
 			<article className={styles.content}>
 				<div className={styles.about}>
+					{/* wrong img below - styling should be different */}
 					<img className={styles.photo} src='./assets/photos/thumb-4.png' alt='main' />
 					<div className={styles.description}>
 						<h1 className={`${styles.header} ${styles.second}`}>Zestaw naczyń bambusowych dla dzieci Alex AMBITION JUNIOR</h1>
