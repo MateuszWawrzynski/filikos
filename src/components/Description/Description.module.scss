@@ -149,10 +149,15 @@
 				font-family: 'Noto Sans';
 				font-weight: bold;
 				color: $color-blueish;
+				cursor: pointer;
 
 				@media (min-width: $desktop-width-transform) {
 					margin: 0;
 					margin-left: 1.7em;
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -282,6 +287,11 @@
 
 						@media (min-width: $desktop-width-transform) {
 							margin-left: 0;
+
+							transition-duration: .1s;
+							&:hover {
+								color: $color-orangeish;
+							}
 						}
 					}
 				}
@@ -323,6 +333,11 @@
 				a {
 					margin-right: 2.9em;
 					color: black;
+
+					transition-duration: .1s;
+					&:hover {
+						color: $color-orangeish;
+					}
 
 					i {
 						margin-right: .7em;
