@@ -87,6 +87,11 @@
 			.question {
 				padding: 1em 0;
 				border-bottom: 1px solid $color-grayish;
+				cursor: pointer;
+
+				&:hover > h2 {
+					color: $color-orangeish;
+				}
 	
 				@media (min-width: $desktop-width-transform) {
 					margin-bottom: .4em;
@@ -102,9 +107,10 @@
 					display: block;
 				}
 	
-				h2 {				
+				h2 {
 					pointer-events: none;
 					font-size: 1.3em;
+					transition-duration: .15s;
 				}
 	
 				p {
@@ -169,9 +175,14 @@
 				font-family: 'Noto Sans';
 				font-weight: bold;
 				color: $color-blueish;
+				cursor: pointer;
 
 				@media (min-width: $desktop-width-transform) {
 					width: 57%;
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}		
 			

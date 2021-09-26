@@ -50,10 +50,15 @@
 		font-family: 'Noto Sans';
 		font-weight: bold;
 		color: $color-blueish;
+		cursor: pointer;
 
 		@media (min-width: $desktop-width-transform) {
 			width: 95%;
 			margin: 1.7em 0 1.2em;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -61,6 +66,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		cursor: pointer;
+
+		transition-duration: .1s;
+		&:hover {
+			> .progressBar { height: 1em; }
+			font-weight: bold;	
+		}
 
 		@media (min-width: $desktop-width-transform) {
 			margin-bottom: .2em;

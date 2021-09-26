@@ -65,6 +65,7 @@
 
 			span {
 				margin-left: .5em;
+				cursor: pointer;
 
 				@media (min-width: $desktop-width-transform) {
 					margin-left: .8em;
@@ -73,6 +74,10 @@
 
 				&:first-of-type {
 					color: $color-blueish;
+				}
+
+				&:hover {
+					border-bottom: 2px solid $color-orangeish;
 				}
 			}
 		}

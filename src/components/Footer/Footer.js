@@ -59,8 +59,8 @@ export default function Footer() {
 					<h1 className={styles.title}>Informacje</h1>
 					<div className={styles.info}>
 						<div>
-							<i className='icon-facebook-circular-logo-(2)'></i>
-							<i className='icon-instagram-(7)'></i>
+							<a href='/' title='Przejdź do naszego profilu Facebook'><i className='icon-facebook-circular-logo-(2)'></i></a>
+							<a href='/' title='Przejdź do naszego profilu Instgram'><i className='icon-instagram-(7)'></i></a>
 						</div>
 						<div className={styles.contact}>
 							<h2><a href='callto:'>575848808</a></h2>

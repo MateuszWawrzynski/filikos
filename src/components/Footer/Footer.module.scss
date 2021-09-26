@@ -85,6 +85,10 @@
 						font-size: 1.3em;
 						color: white;
 						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -96,15 +100,19 @@
 					margin: .9em 0;
 				}
 
-				i {
-					margin: 0 .12em;
-					font-size: 4.8em;
-					color: $color-yellowish;
+				a {
+					text-decoration: none;
 
-					@media (min-width: $desktop-width-transform) {
-						margin-left: .06em;
-						margin-right: .23em;
-						font-size: 4em;
+					i {
+						margin: 0 .12em;
+						font-size: 4.8em;
+						color: $color-yellowish;
+
+						@media (min-width: $desktop-width-transform) {
+							margin-left: .06em;
+							margin-right: .23em;
+							font-size: 4em;
+						}
 					}
 				}
 

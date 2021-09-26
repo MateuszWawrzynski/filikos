@@ -41,11 +41,11 @@ export default function Faq({ title }) {
 							<h2>Czy te miseczki mają atesty bezpieczeństwa?</h2>
 							<p>Tak, jest bardzo wytrzymałe. W codzienny użytkowaniu, nie powinno nic się zdarzyć i wszelkiego rodzaju ocierki nie pozostawią głębokich rys na płytce</p>
 						</div>
-						<div className={styles.question} data-open='false'  onClick={handleOpenAnswer}>
+						<div className={styles.question} data-open='false' onClick={handleOpenAnswer}>
 							<h2>Czy te produkty są w 100% ekologiczne?</h2>
 							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam dignissimos perspiciatis voluptatum doloremque modi. Voluptates unde fugiat</p>
 						</div>
-						<div className={styles.question} data-open='false'  onClick={handleOpenAnswer}>
+						<div className={styles.question} data-open='false' onClick={handleOpenAnswer}>
 							<h2>Czy miseczki nie uczulą 6 miesięcznego dziecka?</h2>
 							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ullam dignissimos perspiciatis voluptatum doloremque modi. Voluptates unde fugiat</p>
 						</div>
